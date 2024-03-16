@@ -1,0 +1,146 @@
+﻿html {
+    box-sizing: border-box; /* Zorgt ervoor dat padding en border in de breedte en hoogte zijn inbegrepen */
+    overflow-x: hidden; /* Voorkomt horizontale scrollbar */
+    overflow-y: auto; /* Verticale scrollbar verschijnt alleen indien nodig */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* Inherit box-sizing van html element */
+}
+
+body {
+    background-color: #658354;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.title {
+    font-size: 48pt;
+}
+
+.subtitle {
+    font-size: 10pt;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    /*background-color: #658354;*/ /* Dezelfde als de body voor consistentie */
+    /*color: white;*/
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    position: fixed; /* Maakt het menu vast bovenaan de pagina */
+    top: 0; /* Positioneert het menu bovenaan */
+    left: 0; /* Uitlijnen met de linkerzijde */
+    width: 100%; /* Volledige breedte */
+    background-color: #658354; /* Niet-transparante achtergrond voor het menu */
+    display: flex;
+    padding: 0px 20px 0px 0px;
+    z-index: 1000; /* Zorgt ervoor dat het menu boven de andere elementen staat */
+    border-bottom: 1px solid #fff;
+    justify-content: flex-end; /* Lijnt de items in de flex container uit naar het einde (rechterkant) */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Dit duwt de nav-links naar rechts */
+}
+
+    .nav-links li {
+        /*padding: 5px 20px 5px 20px;*/
+    }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 20px 5px 20px;
+            display: block;
+        }
+
+            .nav-links li a:hover {
+                color: #999;
+            }
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+    .hamburger-menu .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .email-link {
+        color: inherit; /* De link zal de kleur van de ouder erven */
+        text-decoration: none; /* Geen onderstreping */
+    }
+    .email-link:hover {
+        text-decoration: none; /* Zelfs als je eroverheen gaat, geen onderstreping */
+        /* Je kunt hier andere stijlen toevoegen als je wilt dat er iets gebeurt bij hover */
+    }
+    a {
+        color: inherit; /* De link zal de kleur van de ouder erven */
+    }
+
+
+@media (max-width: 600px) {
+    .navbar {
+        border-bottom: 0px;
+    }
+    .nav-links {
+        background-color: #658354; /* Niet-transparante achtergrond voor het menu */
+        margin-right: 10px;
+        position: fixed; /* Gebruik fixed zodat het menu altijd op het scherm blijft */
+        right: 0; /* Begin vanaf de rechterkant */
+        top: 58px; /* Hoogte van de navbar */
+        flex-direction: column;
+        width: auto; /* Of je kunt een specifieke breedte instellen */
+        display: none; /* Verberg het menu standaard */
+        padding-inline-start: 0px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+
+        .nav-links li {
+            text-align: center;
+            
+        }
+
+    .hamburger-menu {
+        display: block;
+        padding: 20px;
+
+    }
+    /* Zorg ervoor dat de hamburgermenu button altijd zichtbaar is */
+    .hamburger-menu {
+        z-index: 1000; /* Zorg dat dit hoger is dan de nav-list z-index */
+    }
+    .nav-list.active {
+        display: block;
+        background-color: #658354; /* Kies een kleur die overeenkomt met je ontwerp */
+        position: absolute;
+        width: 100%;
+        top: 60px; /* De hoogte van je navbar */
+        left: 0;
+        z-index: 999;
+    }
+}

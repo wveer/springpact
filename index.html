@@ -9,43 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Springpact</title>
-    <style>
-        body {
-            background-color: #658354;
-            color: #fff;
-            font-family: 'Fira Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
 
-        .centered-text {
-            text-align: center;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .title {
-            font-size: 48pt;
-        }
-
-        .subtitle {
-            font-size: 10pt;
-        }
-
-        footer {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            /*background-color: #658354;*/ /* Dezelfde als de body voor consistentie */
-            /*color: white;*/
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
 </head>
-<body>
+<body style="display: flex">
+    <nav class="navbar">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">home</a></li>
+            <li><a href="over.html">over ons</a></li>
+            <li><a href="missie.html">missie, visie</a></li>
+            <li><a href="vacatures.html">vacatures</a></li>
+        </ul>
+    </nav>
+
     <div class="centered-text">
         <p>
             <div class="title">springpact</div>
@@ -55,7 +37,18 @@
         <p>Springpact ontwikkelt en ondersteunt organisaties die de wereld eerlijker, duurzamer, mooier en fijner maken.</p>
     </div>
     <footer>
-        <p>info@springpact.org</p>
+        <p><a href="mailto:info@springpact.org" class="email-link">info@springpact.org</a></p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("navLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
