@@ -14,41 +14,43 @@
 
 </head>
 <body style="display: flex">
-    <nav class="navbar">
-        <div class="hamburger-menu" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <div class="content-wrapper">
+        <nav class="navbar">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">home</a></li>
+                <li><a href="over.html">over ons</a></li>
+                <li><a href="missie.html">missie, visie</a></li>
+                <li><a href="vacatures.html">vacatures</a></li>
+            </ul>
+        </nav>
+
+        <div class="centered-text">
+            <p>
+                <div class="title">springpact</div>
+                <div class="subtitle">family office - shared service center - impact fund</div>
+            </p>
+            <hr />
+            <p>Springpact ontwikkelt en ondersteunt organisaties die de wereld eerlijker en duurzamer maken.</p>
         </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">home</a></li>
-            <li><a href="over.html">over ons</a></li>
-            <li><a href="missie.html">missie, visie</a></li>
-            <li><a href="vacatures.html">vacatures</a></li>
-        </ul>
-    </nav>
+        <footer>
+            <p><a href="mailto:info@springpact.org" class="email-link">info@springpact.org</a></p>
+        </footer>
 
-    <div class="centered-text">
-        <p>
-            <div class="title">springpact</div>
-            <div class="subtitle">family office - shared service center - impact fund</div>
-        </p>
-        <hr />
-        <p>Springpact ontwikkelt en ondersteunt organisaties die de wereld eerlijker en duurzamer maken.</p>
-    </div>
-    <footer>
-        <p><a href="mailto:info@springpact.org" class="email-link">info@springpact.org</a></p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            var x = document.getElementById("navLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+        <script>
+            function toggleMenu() {
+                var x = document.getElementById("navLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
             }
-        }
-    </script>
+        </script>
+    </div>
 </body>
 </html>
