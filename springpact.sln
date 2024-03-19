@@ -6,15 +6,27 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9035829-C044-4B5E-AD9C-09078532DC11}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
-		over.html = over.html
 		missie.html = missie.html
+		over.html = over.html
 		styles.css = styles.css
 		vacatures.html = vacatures.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vacatures", "vacatures", "{9B39C63D-CE7E-4C82-9C7B-DE576F26E9A7}"
+	ProjectSection(SolutionItems) = preProject
+		manager.html = manager.html
+		developer.html = developer.html
+		boekhouder.html = boekhouder.html
+		assistent.html = assistent.html
+		subsidieadviseur.html = subsidieadviseur.html
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B39C63D-CE7E-4C82-9C7B-DE576F26E9A7} = {D9035829-C044-4B5E-AD9C-09078532DC11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {003CAF53-4A68-4F5F-9A4C-1155772F9107}

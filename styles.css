@@ -17,6 +17,9 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
+    margin: 0 auto; /* Centreert de container in de viewport */
+    max-width: 800px; /* Of een andere breedte die je geschikt vindt */
+   
 }
 
 .centered-text {
@@ -142,5 +145,10 @@ footer {
         top: 60px; /* De hoogte van je navbar */
         left: 0;
         z-index: 999;
+    }
+}
+@media (max-width: 800px) {
+    body {
+        max-width: 100%; /* Zorgt ervoor dat de container breedte aanpast op kleinere schermen */
     }
 }
