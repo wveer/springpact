@@ -17,9 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vacatures", "vacatures", "{
 		assistent.html = assistent.html
 		boekhouder.html = boekhouder.html
 		developer.html = developer.html
-		manager.html = manager.html
 		investmentmanager.html = investmentmanager.html
+		manager.html = manager.html
 		subsidieadviseur.html = subsidieadviseur.html
+		vastgoedontwikkelaar.html = vastgoedontwikkelaar.html
 	EndProjectSection
 EndProject
 Global
